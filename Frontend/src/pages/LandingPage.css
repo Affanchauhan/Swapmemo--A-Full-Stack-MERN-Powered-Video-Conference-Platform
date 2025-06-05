@@ -1,0 +1,254 @@
+/* Base Styles */
+.landing-page {
+  position: relative;
+  background-color: rgb(242, 248, 254);
+  color: #212529;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Navigation */
+.app-nav {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #212529;
+}
+
+.logo-accent {
+  color: #3a86ff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #495057;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #3a86ff;
+}
+
+.primary-btn {
+  background-color: #3a86ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: whitesmoke;
+  color: #3a86ff;
+  transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #212529;
+}
+
+.text-accent {
+  color: #3a86ff;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #495057;
+  margin-bottom: 2rem;
+}
+
+/* CTA Button */
+.cta-container {
+  margin-bottom: 3rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #3a86ff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #2667d6;
+  transform: translateY(-2px);
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/* Feature Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f8ff;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.feature-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #3a86ff;
+  stroke-width: 2;
+}
+
+.feature-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+
+.feature-item p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Mobile Image */
+.mobile-image {
+  max-width: 450px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.pulse-effect {
+  transform: scale(1.05);
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  .hero-content {
+    margin-bottom: 3rem;
+    max-width: 100%;
+  }
+
+  .feature-grid {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-image {
+    max-width: 250px;
+  }
+}
